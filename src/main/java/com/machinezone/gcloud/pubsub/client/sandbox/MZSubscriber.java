@@ -10,7 +10,6 @@ import com.google.api.services.pubsub.model.PubsubMessage;
 import com.google.api.services.pubsub.model.PullRequest;
 import com.google.api.services.pubsub.model.PullResponse;
 import com.google.api.services.pubsub.model.ReceivedMessage;
-import com.machinezone.gcloud.pubsub.client.sandbox.*;
 
 public class MZSubscriber {
 
