@@ -19,11 +19,11 @@ public class MZSubscriber {
 		// You can fetch multiple messages with a single API call.
 		int batchSize = 10;
 		PullRequest pullRequest = new PullRequest()
-	        // Setting ReturnImmediately to false instructs the API to
-	        // wait to collect the message up to the size of
-	        // MaxEvents, or until the timeout.
-	        .setReturnImmediately(false)
-	        .setMaxMessages(batchSize);
+		        // Setting ReturnImmediately to false instructs the API to
+		        // wait to collect the message up to the size of
+		        // MaxEvents, or until the timeout.
+		        .setReturnImmediately(false)
+		        .setMaxMessages(batchSize);
 		do {
 			Thread.sleep(1000);
 		    PullResponse pullResponse = pubsub.projects().subscriptions().pull(subscriptionName, pullRequest).execute();

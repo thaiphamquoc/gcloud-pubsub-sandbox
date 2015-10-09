@@ -19,8 +19,7 @@ public class PortableConfiguration {
 
     // Default factory method.
     public static Pubsub createPubsubClient() throws IOException {
-        return createPubsubClient(Utils.getDefaultTransport(),
-                Utils.getDefaultJsonFactory());
+        return createPubsubClient(Utils.getDefaultTransport(), Utils.getDefaultJsonFactory());
     }
 
     // A factory method that allows you to use your own HttpTransport
@@ -36,8 +35,7 @@ public class PortableConfiguration {
         // Please use custom HttpRequestInitializer for automatic
         // retry upon failures.  We provide a simple reference
         // implementation in the "Retry Handling" section.
-        HttpRequestInitializer initializer =
-                new RetryHttpInitializerWrapper(credential);
+        HttpRequestInitializer initializer = new RetryHttpInitializerWrapper(credential);
         return new Pubsub.Builder(httpTransport, jsonFactory, initializer).build();
     }
 }
